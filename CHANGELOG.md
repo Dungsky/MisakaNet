@@ -7,6 +7,68 @@ All notable changes to the Misaka Network project are documented here.
 
 ---
 
+## [3.0.0](https://github.com/Ikalus1988/MisakaNet/compare/v2.50.1...v3.0.0) (2026-10-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* **packaging:** the package now requires Python >= 3.11. Python 3.10 reached end-of-life on 2026-10-01 and is no longer supported, so pip refuses to install this release on 3.10 with "requires a different Python". Upgrade the interpreter to 3.11 or newer before upgrading the package.
+
+### Features
+
+* **gate:** a mechanism that runs by itself must be able to fail ([87a987b](https://github.com/Ikalus1988/MisakaNet/commit/87a987bd7ed467f52380fb72b58405bcb41d92d6))
+* **gate:** a mechanism that runs by itself must be able to fail ([7c8a497](https://github.com/Ikalus1988/MisakaNet/commit/7c8a4979369062ed1ebd1cdedb2687710ce67652))
+* **maintainer:** check downstream PRs before merging a branch ([#3867](https://github.com/Ikalus1988/MisakaNet/issues/3867)) ([5a2f115](https://github.com/Ikalus1988/MisakaNet/commit/5a2f1158552c8cc2418a9630f1c86aa7e3691884))
+* **packaging:** the interpreter floor is 3.11 — Python 3.10 reached end-of-life on 2026-10-01 ([1e9ca23](https://github.com/Ikalus1988/MisakaNet/commit/1e9ca23dc6ac9a1cf2c4a1b311b319501d7b2ace))
+* **setup:** the verify verdict is per client, and one client can be judged on its own ([48879af](https://github.com/Ikalus1988/MisakaNet/commit/48879aff3db5f2b2c6624c928a45fabf5348d88c))
+* **setup:** the verify verdict is per client, and one client can be judged on its own ([3f7310d](https://github.com/Ikalus1988/MisakaNet/commit/3f7310d582c733597f1b5a46c60c225455bc488c))
+
+
+### Bug Fixes
+
+* **audit:** the intake-kind flip check now decides the exit code ([#3853](https://github.com/Ikalus1988/MisakaNet/issues/3853)) ([db187b1](https://github.com/Ikalus1988/MisakaNet/commit/db187b1882775686f912104d71dd023546b558d7))
+* **audit:** the node summary is read in both reporter shapes ([363a02e](https://github.com/Ikalus1988/MisakaNet/commit/363a02e1b5b76b438e43022920cd9d8c6d13aadb))
+* **audit:** the node summary is read in both reporter shapes ([bc4ad9d](https://github.com/Ikalus1988/MisakaNet/commit/bc4ad9d860dc174409ced0a1e3d6d62e2f0e655a))
+* **ci:** prove all four hard gates can go red, on every PR ([#3855](https://github.com/Ikalus1988/MisakaNet/issues/3855)) ([5f5e69f](https://github.com/Ikalus1988/MisakaNet/commit/5f5e69f195917fd272f3dec8a0ff7c0cbd0a1981))
+* **ci:** the failure→lesson path must be able to see, and must say when it cannot ([2718b5a](https://github.com/Ikalus1988/MisakaNet/commit/2718b5a7ce4f874be4a153c9b468aae2ec4e599e))
+* **ci:** the failure→lesson path must be able to see, and must say when it cannot ([b4a51ac](https://github.com/Ikalus1988/MisakaNet/commit/b4a51ac39ae354f5ceb93459bd2e1f16a7a0b08e))
+* **ci:** the same-repo test compared a field the context does not have ([332abfa](https://github.com/Ikalus1988/MisakaNet/commit/332abfa70e6e675bc9a51547b687375898481540))
+* **ci:** the same-repo test compared a field the context does not have ([67e0f3b](https://github.com/Ikalus1988/MisakaNet/commit/67e0f3b6ce00aeb072bc972103c03ac258be8cfe))
+* **gate:** decide the third-party scanner's verdict here, not on Monday ([9348da6](https://github.com/Ikalus1988/MisakaNet/commit/9348da651c234bb617ed6283dc4c56cb0418c91b))
+* **hook:** the entry guard must survive a symlinked path ([54b29b6](https://github.com/Ikalus1988/MisakaNet/commit/54b29b606e7a2a27563540da5a0354df3ffdb255))
+* **hook:** the entry guard must survive a symlinked path ([3c623d0](https://github.com/Ikalus1988/MisakaNet/commit/3c623d0643105455df0aef539ed30d78ed5d7d7f))
+* **installer:** the DSH uninstall removes the autostart block it wrote ([0d03b39](https://github.com/Ikalus1988/MisakaNet/commit/0d03b39d2df5d3c2cf61159a02111fee698ce4ea))
+* **installer:** the DSH uninstall removes the autostart block it wrote ([889d23b](https://github.com/Ikalus1988/MisakaNet/commit/889d23b27194436466b6b9239a54de58d848c411))
+* **installer:** the uninstall takes back what we wrote and nothing else ([088338e](https://github.com/Ikalus1988/MisakaNet/commit/088338e957974425be504468738e4796a25a0d89))
+* **installer:** the uninstall takes back what we wrote and nothing else ([d943464](https://github.com/Ikalus1988/MisakaNet/commit/d943464d69b6bd7953a8883409e9e4b8b14be1c6))
+* **release:** render the root Release body from the CHANGELOG ([#3854](https://github.com/Ikalus1988/MisakaNet/issues/3854)) ([689a960](https://github.com/Ikalus1988/MisakaNet/commit/689a960d58a2094bf32bba90bf39617c8def7d30)), closes [#3836](https://github.com/Ikalus1988/MisakaNet/issues/3836)
+* **release:** stand down on npm E409 when the version already exists ([#3826](https://github.com/Ikalus1988/MisakaNet/issues/3826)) ([07f15c6](https://github.com/Ikalus1988/MisakaNet/commit/07f15c6faea60b6609b6ef6a0f2856a35f940eba))
+* **script:** the mutation audit's planted token is assembled at run time ([8998df8](https://github.com/Ikalus1988/MisakaNet/commit/8998df85dc1a9b4043a3628c8145ed066687c3ec))
+* **setup:** the installer honours MISAKANET_AGENT_DIR like the hook does ([#3844](https://github.com/Ikalus1988/MisakaNet/issues/3844)) ([a0cd165](https://github.com/Ikalus1988/MisakaNet/commit/a0cd16542b8085e6b52b1f9db55306756c659c90))
+* **setup:** uninstall ownership, stable client id, truthful manifest ([#3852](https://github.com/Ikalus1988/MisakaNet/issues/3852)) ([8e8b132](https://github.com/Ikalus1988/MisakaNet/commit/8e8b13292e7538131f7fddeaed05478e89875090)), closes [#3831](https://github.com/Ikalus1988/MisakaNet/issues/3831) [#3832](https://github.com/Ikalus1988/MisakaNet/issues/3832) [#3833](https://github.com/Ikalus1988/MisakaNet/issues/3833) [#3834](https://github.com/Ikalus1988/MisakaNet/issues/3834)
+* **setup:** verify and report key Claude Code on ~/.claude.json ([#3868](https://github.com/Ikalus1988/MisakaNet/issues/3868)) ([2cb53ca](https://github.com/Ikalus1988/MisakaNet/commit/2cb53caba95f093ab4e0011a89b54ba8e2820e4a))
+
+
+### Documentation
+
+* **setup:** the flags table has to know about --client ([48d42b0](https://github.com/Ikalus1988/MisakaNet/commit/48d42b0949d6a4368d1b98b4d3a9fa6fbf58b37f))
+* **setup:** the restart is not universal, and the tool list is how you confirm it ([#3830](https://github.com/Ikalus1988/MisakaNet/issues/3830)) ([7e74ec9](https://github.com/Ikalus1988/MisakaNet/commit/7e74ec9efd2c4c399cce7d369c40f7fef05415d1)), closes [#3700](https://github.com/Ikalus1988/MisakaNet/issues/3700)
+* **test:** the floor-docs rule describes one floor, not two ([9859e90](https://github.com/Ikalus1988/MisakaNet/commit/9859e90bfaadfbf1654b8522c0cb4ce6652990f5))
+* **test:** the floor-docs rule describes one floor, not two ([e7d74a2](https://github.com/Ikalus1988/MisakaNet/commit/e7d74a2dc1a27185781e782d3c4837b200b6a6c1))
+
+
+### Tests
+
+* **gate:** decide the third-party scanner's verdict here, not on Monday ([dd4f141](https://github.com/Ikalus1988/MisakaNet/commit/dd4f14187c26253cdda1ce5e75581d74ee472055))
+* **hook:** make the inner redaction gate load-bearing ([#3866](https://github.com/Ikalus1988/MisakaNet/issues/3866)) ([54dab95](https://github.com/Ikalus1988/MisakaNet/commit/54dab95d66be6a438c03fabcf2561db2262ea272))
+* **setup:** the manifest assertion must not assume POSIX separators ([bcb4065](https://github.com/Ikalus1988/MisakaNet/commit/bcb4065febebbc97d7d4152b77da630a51a5ca92))
+* **setup:** the manifest assertion must not assume POSIX separators ([bc48fce](https://github.com/Ikalus1988/MisakaNet/commit/bc48fce6bf58ea62ebb06220799445ca928a4f6b))
+
+
+### Lessons
+
+* **contrib:** 125 intake lessons from the 2026-10-25 triage ([#3851](https://github.com/Ikalus1988/MisakaNet/issues/3851)) ([f757620](https://github.com/Ikalus1988/MisakaNet/commit/f7576206b700ca0dcbf709ff94d85b0ffa8b5815))
+
 ## [2.50.1](https://github.com/Ikalus1988/MisakaNet/compare/v2.50.0...v2.50.1) (2026-10-25)
 
 
